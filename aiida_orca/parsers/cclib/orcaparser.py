@@ -688,6 +688,9 @@ Dispersion correction           -0.016199959
 
             while line:
                 tokens = line.split()
+                if tokens[-1] == "D4":
+                    line = next(inputfile) # skipping line "Starting D4"
+                    continue
                 x, y, z = float(tokens[-3]), float(tokens[-2]), float(
                     tokens[-1])
                 grads.append((x, y, z))

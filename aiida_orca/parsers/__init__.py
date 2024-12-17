@@ -13,6 +13,7 @@ from aiida.orm import Dict, StructureData
 
 from .cclib.utils import PeriodicTable
 from .cclib.ccio import ccread
+from cclib.io.ccio import ccopen
 
 
 class OrcaBaseParser(Parser):
@@ -40,6 +41,12 @@ class OrcaBaseParser(Parser):
             with self.retrieved.open(fname_out) as handle:
                 parsed_obj = ccread(handle)
                 parsed_dict = parsed_obj.getattributes()
+            # Cooper added this part to include the Latin-1 encoding in case UTF-8 fails
+            # open() call can't accept encodings and is locked to UTF-8
+            # except:
+            #     with self.retrieved.open(fname_out, encoding="ISO-8859-1") as handle:
+            #         parsed_obj = ccread(handle)
+            #         parsed_dict = parsed_obj.getattributes()
         except Exception:  # pylint: disable=broad-except
             self.logger.error(f'ERROR: cclib could not parse file {fname_out}')
             self.logger.error(f'{traceback.format_exc()}')

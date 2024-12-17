@@ -67,13 +67,18 @@ class OrcaCalculation(CalcJob):
             message='The retrieved folder did not contain the required stdout output file.'
         )
         spec.exit_code(
+            120,
+            'ERROR_SCHEDULER_OUT_OF_WALLTIME',
+            message="The job ran out of walltime."
+        )
+        spec.exit_code(
             303, 'ERROR_CALCULATION_UNSUCCESSFUL', message='The ORCA calculation did not finish succesfully.'
         )
         spec.exit_code(311, 'ERROR_OUTPUT_STDOUT_PARSE', message='The stdout output file could not be parsed.')
 
         # Output parameters
         spec.output('output_parameters', valid_type=Dict, required=True, help='the results of the calculation')
-        spec.output('relaxed_structure', valid_type=StructureData, required=False, help='relaxed structure')
+        spec.output('relaxed_structure', valid_type=StructureData, required=True, help='relaxed structure')
         spec.default_output_node = 'output_parameters'
 
     def prepare_for_submission(self, folder: Folder) -> CalcInfo:
