@@ -1,0 +1,16 @@
+<molecule>
+ <atomArray>
+  <atom id="a1" elementType="Cl" x3="-3.171321" y3="-0.110226" z3="-0.077133"/>
+  <atom id="a2" elementType="O" x3="-2.064088" y3="0.481945" z3="0.640024"/>
+  <atom id="a3" elementType="O" x3="-2.736677" y3="-1.198974" z3="-0.921659"/>
+  <atom id="a4" elementType="O" x3="-4.171722" y3="-0.577989" z3="0.870265"/>
+  <atom id="a5" elementType="O" x3="-3.840639" y3="0.906501" z3="-0.871354"/>
+  <atom id="a6" elementType="Na" x3="-6.731042" y3="1.191438" z3="0.666994"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a3" order="1"/>
+  <bond atomRefs2="a1 a4" order="1"/>
+  <bond atomRefs2="a1 a5" order="1"/>
+ </bondArray>
+</molecule>

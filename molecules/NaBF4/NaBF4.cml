@@ -1,0 +1,27 @@
+<molecule>
+ <crystal>
+  <scalar title="a" units="units:angstrom">20.000000</scalar>
+  <scalar title="b" units="units:angstrom">20.000000</scalar>
+  <scalar title="c" units="units:angstrom">20.000000</scalar>
+  <scalar title="alpha" units="units:degree">90.000000</scalar>
+  <scalar title="beta" units="units:degree">90.000000</scalar>
+  <scalar title="gamma" units="units:degree">90.000000</scalar>
+  <symmetry spaceGroup="P 1">
+   <transform3>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform3>
+  </symmetry>
+ </crystal>
+ <atomArray>
+  <atom id="a1" elementType="B" xFract="0.476406" yFract="0.471575" zFract="0.471481"/>
+  <atom id="a2" elementType="F" xFract="0.466986" yFract="0.466336" zFract="0.541495"/>
+  <atom id="a3" elementType="F" xFract="0.475638" yFract="0.539910" zFract="0.452539"/>
+  <atom id="a4" elementType="F" xFract="0.538608" yFract="0.442672" zFract="0.453672"/>
+  <atom id="a5" elementType="F" xFract="0.424178" yFract="0.437266" zFract="0.438321"/>
+  <atom id="a6" elementType="Na" xFract="0.597153" yFract="0.600027" zFract="0.600835"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a5 a1" order="1"/>
+  <bond atomRefs2="a3 a1" order="1"/>
+  <bond atomRefs2="a4 a1" order="1"/>
+  <bond atomRefs2="a1 a2" order="1"/>
+ </bondArray>
+</molecule>
