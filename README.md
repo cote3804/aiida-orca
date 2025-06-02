@@ -45,4 +45,6 @@ All code used to submit jobs and process their outputs is included in the `examp
 
 All starting molecule structures are found in the `molecules` folder. These can also be accessed by viewing the _provenance_ and writing the input structures to your point cloud file format of choice.
 
+Zenodo DOI: 10.5281/zenodo.15579754
+
 <!-- ![aiida-orca](miscellaneous/ackn_logo.png) -->
