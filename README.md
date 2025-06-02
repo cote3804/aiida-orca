@@ -38,22 +38,11 @@ cd aiida-orca
 pip install .
 ```
 
-# aiida-common-workflows
-The `aiida-orca` package is available in the
-[aiida-common-workflow](https://github.com/aiidateam/aiida-common-workflows) package.
-You may try it to have a quick setup and exploration of `aiida-orca` and many more packages.
-For further details, please check [our paper](https://www.nature.com/articles/s41524-021-00594-6) on `aiida-common-worlflows`.
+# Publication Code
+This branch contains the code used to generate data for _DOI Pending_. Small changes were made to the cclib parsers to extract information from ORCA output files on CU's Alpine cluster, which had a version of ORCA that printed outputs slightly differently than what the base cclib parsers expected. 
 
-# Contribution guide
-We welcome contribution to the code either it is a new feature implementation or bug fix.
-Please check the [Developer Guide](https://aiida-orca.readthedocs.io/en/develop/developer_guide/index.html)
-in documentation for the instructions.
+All code used to submit jobs and process their outputs is included in the `examples/` directory. These scripts still contain raw paths and computer configurations relevant for my hardware, so please be aware that they will not work if you install them and attempt to run them directly. Furthermore, AiiDA stores all information about the computational workflows in its [provenance](https://aiida.readthedocs.io/projects/aiida-core/en/stable/topics/provenance/concepts.html), which can be accessed by [importing the archive file](https://aiida.readthedocs.io/projects/aiida-core/en/stable/howto/data.html) found in the [figshare](https://doi.org/10.6084/m9.figshare.28047047.v1) associated with this publication.
 
-# Issue reporting
-Please feel free to open an issue to report bugs or requesting new features.
-
-
-# Acknowledgment
-I would like to thank the funding received from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie Actions and cofinancing by the South Moravian Region under agreement 665860. This software reflects only the authors’ view and the EU is not responsible for any use that may be made of the information it contains.
+All starting molecule structures are found in the `molecules` folder. These can also be accessed by viewing the _provenance_ and writing the input structures to your point cloud file format of choice.
 
 <!-- ![aiida-orca](miscellaneous/ackn_logo.png) -->
